@@ -3,9 +3,9 @@ def two_sum(nums, target):
     num_map = {}
 
     for index, num in enumerate(nums):
-        complement = target - num
-        if complement in num_map:
-            return [num_map[complement], index]
+        found = target - num
+        if found in num_map:
+            return [num_map[found], index]
         num_map[num] = index
 
     return []
